@@ -9,14 +9,13 @@ android {
 
     defaultConfig {
         applicationId "com.hhj.aspectjdemo"
-        minSdkVersion 14
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -27,7 +26,12 @@ android {
 //        sourceCompatibility JavaVersion.VERSION_1_8
 //        targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildToolsVersion '30.0.3'
 }
+aspectjx {
+    exclude 'com.google.firebase','com.google.android'
+}
+
 
 dependencies {
 
